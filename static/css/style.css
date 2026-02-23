@@ -37,7 +37,7 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 100px;
 }
 
 .nav ul {
@@ -147,4 +147,5 @@ body {
     .menu-toggle {
         display: block;
     }
+
 }
