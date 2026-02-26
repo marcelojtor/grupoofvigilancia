@@ -36,9 +36,23 @@ body {
     padding: 15px 0;
 }
 
-.logo img {
-    height: 100px;
+/* ===== AJUSTE CIRÚRGICO DE ALINHAMENTO ===== */
+.logo {
+    display: flex;
+    align-items: center;
 }
+
+.logo img {
+    height: 70px; /* ajustado para alinhar com o menu */
+}
+
+.logo span {
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* ============================================ */
 
 .nav ul {
     list-style: none;
@@ -146,6 +160,11 @@ body {
 
     .menu-toggle {
         display: block;
+    }
+
+    /* Ajuste responsivo da legenda */
+    .logo span {
+        font-size: 14px;
     }
 
 }
