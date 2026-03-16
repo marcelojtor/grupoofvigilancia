@@ -253,6 +253,43 @@ transform:translateY(0);
 }
 
 
+/* ================= BOTÃO WHATSAPP ================= */
+
+.botao-whatsapp{
+
+position:fixed;
+
+right:20px;
+
+bottom:30px;
+
+background:#25D366;
+
+color:#fff;
+
+padding:14px 20px;
+
+border-radius:30px;
+
+font-weight:600;
+
+text-decoration:none;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+z-index:9999;
+
+transition:all 0.3s ease;
+
+}
+
+.botao-whatsapp:hover{
+
+transform:translateY(-3px);
+
+}
+
+
 /* ================= RESPONSIVO ================= */
 
 @media(max-width:768px){
@@ -294,24 +331,6 @@ display:block;
 flex-direction:column;
 
 text-align:center;
-
-  .botao-whatsapp{
-position:fixed;
-right:20px;
-bottom:30px;
-background:#25D366;
-color:#fff;
-padding:14px 20px;
-border-radius:30px;
-font-weight:600;
-text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-z-index:9999;
-}
-
-.botao-whatsapp:hover{
-transform:translateY(-3px);
-}
 
 }
 
