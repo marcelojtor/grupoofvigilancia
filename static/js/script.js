@@ -47,17 +47,3 @@ document.querySelectorAll('.section').forEach(section => {
 
 });
 
-// ANIMAÇÃO IMAGENS SEGMENTOS
-const imagens = document.querySelectorAll('.detalhe-box img');
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    });
-});
-
-imagens.forEach(img => {
-    observer.observe(img);
-});
