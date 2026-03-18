@@ -430,12 +430,12 @@ justify-content:center;
 
 .hidden-detalhe{
 opacity:0;
-transform:translateX(-100px);
+transform:translateX(-200px);
 transition:all 3s ease;
 }
 
 .detalhe-box.reverse.hidden-detalhe{
-transform:translateX(100px);
+transform:translateX(200px);
 }
 
 .detalhe-box.show{
@@ -445,11 +445,11 @@ transform:translateX(0);
 
 /* leve zoom elegante */
 .detalhe-box img{
-transition:transform 0.6s ease;
+transition:transform 1s ease;
 }
 
 .detalhe-box img:hover{
-transform:scale(1.05);
+transform:scale(2.05);
 }
   
 }
