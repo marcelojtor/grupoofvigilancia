@@ -425,25 +425,5 @@ text-align:center;
 justify-content:center;
 
 }
-
-/* ================= ANIMAÇÃO IMAGEM SEGMENTOS ================= */
-
-/* estado inicial */
-.detalhe-box img{
-opacity:0;
-transform:translateX(-40px) scale(1);
-transition:all 0.8s ease;
-}
-
-/* quando aparece */
-.detalhe-box img.show{
-opacity:1;
-transform:translateX(0) scale(1);
-}
-
-/* efeito hover elegante */
-.detalhe-box img:hover{
-transform:scale(1.04);
-}
   
 }
