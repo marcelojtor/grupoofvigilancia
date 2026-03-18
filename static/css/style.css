@@ -192,9 +192,13 @@ gap:30px;
 
 }
 
+/* 🔥 ALTERAÇÃO CIRÚRGICA */
 .detalhe-box img{
 
-width:90px;
+width:420px;
+height:260px;
+object-fit:cover;
+border-radius:6px;
 
 }
 
