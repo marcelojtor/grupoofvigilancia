@@ -430,12 +430,12 @@ justify-content:center;
 
 .hidden-detalhe{
 opacity:0;
-transform:translateX(-60px);
+transform:translateX(-100px);
 transition:all 3s ease;
 }
 
 .detalhe-box.reverse.hidden-detalhe{
-transform:translateX(60px);
+transform:translateX(100px);
 }
 
 .detalhe-box.show{
