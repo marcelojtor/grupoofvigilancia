@@ -47,3 +47,57 @@ document.querySelectorAll('.section').forEach(section => {
 
 });
 
+
+// ================= ANIMAÇÃO PREMIUM SEGMENTOS =================
+
+// animação com delay progressivo + direção
+const observerDetalhes = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const delay = entry.target.getAttribute('data-delay') || 0;
+
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, delay * 1000);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+document.querySelectorAll('.detalhe-box').forEach(box => {
+
+    box.classList.add('hidden-detalhe');
+    observerDetalhes.observe(box);
+
+});
+
+
+// ================= PARALLAX LEVE =================
+
+window.addEventListener('scroll', () => {
+
+    const imagens = document.querySelectorAll('.detalhe-box img');
+
+    imagens.forEach(img => {
+
+        const rect = img.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight && rect.bottom > 0) {
+
+            const deslocamento = (rect.top / windowHeight) * 20;
+
+            img.style.transform = `translateY(${deslocamento}px) scale(1.02)`;
+
+        }
+
+    });
+
+});
