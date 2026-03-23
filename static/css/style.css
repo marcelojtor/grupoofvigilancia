@@ -271,6 +271,11 @@ body {
     .footer-col { text-align: center; }
     .footer-social { justify-content: center; }
     
-    .banner-segmentos { height: 220px; } /* Ajuste mobile do banner efeito */
-    .banner-segmentos img { animation: none; transform: scale(1); } /* Garante imagem estática no mobile */
+    /* 🔥 AJUSTE CIRÚRGICO MOBILE: Altura automática para não cortar a imagem */
+    .banner-segmentos { height: auto; } 
+    .banner-segmentos img { 
+        animation: none; 
+        transform: scale(1); 
+        object-fit: contain; /* Garante que a imagem inteira apareça sem cortes */
+    } 
 }
