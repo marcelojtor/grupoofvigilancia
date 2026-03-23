@@ -113,20 +113,19 @@ body {
 .detalhe-box {
     display: flex;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 40px; /* Espaço entre os blocos */
+    gap: 40px;
 }
 
-/* 🔥 ESTA É A MÁGICA: Inverte a ordem apenas em telas grandes */
+/* 🔥 INVERSÃO NO DESKTOP: Baseada na classe "reverse" do seu HTML */
 @media (min-width: 769px) {
-    .detalhe-box:nth-child(even) {
+    .detalhe-box.reverse {
         flex-direction: row-reverse;
     }
 }
 
 .detalhe-box img {
     width: 100%;
-    max-width: 550px; /* Reduzi levemente para melhor equilíbrio */
+    max-width: 550px;
     height: auto;
     object-fit: cover;
     border-radius: 6px;
@@ -189,8 +188,10 @@ body {
     .nav ul.active { display: flex; }
     .menu-toggle { display: block; }
 
-    .detalhe-box {
-        flex-direction: column !important; /* Força empilhar no mobile */
+    /* 🔥 DESATIVA O ZIG-ZAG NO MOBILE */
+    .detalhe-box, 
+    .detalhe-box.reverse {
+        flex-direction: column !important;
         text-align: center;
         gap: 20px;
     }
