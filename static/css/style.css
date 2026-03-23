@@ -164,7 +164,7 @@ body {
     height: 100%;
     object-fit: cover; /* Garante que a imagem preencha o espaço */
     display: block;
-    filter: brightness(0.7) contrast(1.1); 
+    filter: brightness(0.9) contrast(1.1); 
     will-change: transform;
 }
 
