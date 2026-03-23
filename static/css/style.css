@@ -165,8 +165,14 @@ body {
     object-fit: cover; /* Garante que a imagem preencha o espaço */
     display: block;
     filter: brightness(0.7) contrast(1.1); 
-    animation: zoomLento 20s infinite alternate ease-in-out;
     will-change: transform;
+}
+
+/* Ativa a animação APENAS no Desktop e acelerado para 10s */
+@media (min-width: 769px) {
+    .banner-segmentos img {
+        animation: zoomLento 10s infinite alternate ease-in-out;
+    }
 }
 
 /* Overlay Dourado/Escuro */
@@ -266,4 +272,5 @@ body {
     .footer-social { justify-content: center; }
     
     .banner-segmentos { height: 220px; } /* Ajuste mobile do banner efeito */
+    .banner-segmentos img { animation: none; transform: scale(1); } /* Garante imagem estática no mobile */
 }
