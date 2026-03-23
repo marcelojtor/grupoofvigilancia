@@ -38,7 +38,6 @@ position:fixed;
 width:100%;
 top:0;
 
-/* 🔥 EFEITO TRANSLÚCIDO PROFISSIONAL */
 background: rgba(255,255,255,0.75);
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
@@ -114,7 +113,6 @@ display:block;
 padding:90px 0;
 transition:all 0.8s ease;
 
-/* 🔥 EFEITO “CARD SOBRE BACKGROUND” */
 background: rgba(255,255,255,0.92);
 backdrop-filter: blur(2px);
 border-radius:8px;
@@ -211,11 +209,12 @@ gap:30px;
 
 }
 
-/* 🔥 ALTERAÇÃO CIRÚRGICA */
+/* 🔥 CORREÇÃO RESPONSIVA (ANTES QUEBRAVA MOBILE) */
 .detalhe-box img{
 
-width:750px;
-height:540px;
+width:100%;
+max-width:650px;
+height:auto;
 object-fit:cover;
 border-radius:6px;
 
@@ -242,7 +241,6 @@ text-align:center;
 
 padding:60px 0;
 
-/* 🔥 FOOTER SOBRE BACKGROUND */
 background: rgba(255,255,255,0.92);
 
 border-top:1px solid #eee;
@@ -355,6 +353,17 @@ display:block;
 flex-direction:column;
 
 text-align:center;
+gap:20px;
+
+}
+
+/* 🔥 AJUSTE MOBILE IMAGEM */
+.detalhe-box img{
+
+max-width:100%;
+height:auto;
+margin:0 auto;
+display:block;
 
 }
 
@@ -463,13 +472,13 @@ opacity:1;
 transform:translateX(0);
 }
 
-/* leve zoom elegante */
+/* 🔥 ZOOM AJUSTADO (ANTES QUEBRAVA MOBILE) */
 .detalhe-box img{
 transition:transform 1s ease;
 }
 
 .detalhe-box img:hover{
-transform:scale(2.05);
+transform:scale(1.05);
 }
   
 }
