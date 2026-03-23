@@ -455,21 +455,21 @@ justify-content:center;
 
 }
 
-/* ================= ANIMAÇÃO PREMIUM DETALHES ================= */
+/* ================= ANIMAÇÃO PREMIUM DETALHES (DESATIVADO) ================= */
 
 .hidden-detalhe{
-opacity:0;
-transform:translateX(-200px);
-transition:all 3s ease;
+opacity:1;
+transform:none;
+transition:none;
 }
 
 .detalhe-box.reverse.hidden-detalhe{
-transform:translateX(200px);
+transform:none;
 }
 
 .detalhe-box.show{
 opacity:1;
-transform:translateX(0);
+transform:none;
 }
 
 /* 🔥 ZOOM AJUSTADO (ANTES QUEBRAVA MOBILE) */
