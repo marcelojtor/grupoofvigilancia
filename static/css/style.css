@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
     background: #ffffff url('../hub_de_imagens_2/background.png') no-repeat center center fixed;
     background-size: cover;
-    color: #444; /* ALTERADO: De preto para cinza escuro */
+    color: #444; 
     line-height: 1.6;
 }
 
@@ -63,10 +63,11 @@ body {
 .nav a:hover { opacity: 0.6; }
 .menu-toggle { display: none; font-size: 26px; cursor: pointer; }
 
-/* ================= BANNER & SEÇÕES ================= */
-.banner { margin-top: 85px; }
+/* ================= BANNER PRINCIPAL ================= */
+.banner { margin-top: 85px; width: 100%; }
 .banner img { width: 100%; display: block; }
 
+/* ================= SEÇÕES ================= */
 .section {
     padding: 40px 0; 
     transition: all 0.8s ease;
@@ -81,8 +82,8 @@ body {
 .section h2 { 
     text-align: center; 
     margin-bottom: 25px; 
-    font-weight: 700;    /* Ajustado conforme exemplo */
-    color: #a68210;     /* ALTERADO: Dourado escuro */
+    font-weight: 700;    
+    color: #a68210;     
     font-size: 32px;
 }
 
@@ -140,12 +141,51 @@ body {
 
 .detalhe-box h3 { 
     margin-bottom: 8px; 
-    color: #a68210; /* ALTERADO: Dourado escuro */
+    color: #a68210; 
     font-weight: 700; 
     font-size: 28px;
 }
 
 .detalhe-box p { max-width: 700px; }
+
+/* ================= EFEITO CORPORATIVO BANNER SEGMENTOS ================= */
+
+.banner-segmentos {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Altura fixa para permitir o zoom interno */
+    overflow: hidden;
+    background-color: #000;
+    margin-bottom: 15px;
+}
+
+.banner-segmentos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+    display: block;
+    filter: brightness(0.7) contrast(1.1); 
+    animation: zoomLento 20s infinite alternate ease-in-out;
+    will-change: transform;
+}
+
+/* Overlay Dourado/Escuro */
+.banner-segmentos::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(166, 130, 16, 0.2) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes zoomLento {
+    from { transform: scale(1); }
+    to { transform: scale(1.15); }
+}
 
 /* ================= COMPONENTES EXTRAS ================= */
 .hidden { opacity: 0; transform: translateY(40px); }
@@ -224,50 +264,6 @@ body {
     .footer-container { text-align: center; flex-direction: column; align-items: center; }
     .footer-col { text-align: center; }
     .footer-social { justify-content: center; }
-    }
-
-/* ================= EFEITO CORPORATIVO BANNER SEGMENTOS ================= */
-
-.banner-segmentos {
-    position: relative;
-    width: 100%;
-    height: 350px; /* Ajuste a altura conforme desejar */
-    overflow: hidden;
-    background-color: #000;
+    
+    .banner-segmentos { height: 220px; } /* Ajuste mobile do banner efeito */
 }
-
-/* O efeito de zoom lento na imagem */
-.banner-segmentos img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.7) contrast(1.1); /* Deixa a imagem mais impactante */
-    animation: zoomLento 20s infinite alternate ease-in-out;
-}
-
-/* Camada dourada/escura por cima para dar elegância */
-.banner-segmentos::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(166, 130, 16, 0.15) 100%);
-    pointer-events: none;
-}
-
-/* Animação de zoom quase imperceptível */
-@keyframes zoomLento {
-    from { transform: scale(1); }
-    to { transform: scale(1.15); }
-}
-
-/* Ajuste para mobile */
-@media (max-width: 768px) {
-    .banner-segmentos {
-        height: 200px;
-    }
-}
-
