@@ -481,4 +481,28 @@ transition:transform 1s ease;
 transform:scale(1.05);
 }
   
+/* ================= LAYOUT ALTERNADO (SOMENTE DESKTOP) ================= */
+
+@media(min-width:769px){
+
+.detalhe-box{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+/* alterna automaticamente: pares invertidos */
+.segmento-detalhe:nth-child(even) .detalhe-box{
+flex-direction:row-reverse;
+}
+
+/* ajuste visual mais premium */
+.detalhe-box img{
+flex:1;
+}
+
+.detalhe-box div{
+flex:1;
+}
+
 }
