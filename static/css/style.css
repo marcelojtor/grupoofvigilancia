@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
     background: #ffffff url('../hub_de_imagens_2/background.png') no-repeat center center fixed;
     background-size: cover;
-    color: #111;
+    color: #444; /* ALTERADO: De preto para cinza escuro */
     line-height: 1.6;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .logo img { height: 85px; }
-.logo span { font-weight: 600; font-size: 16px; }
+.logo span { font-weight: 600; font-size: 16px; color: #111; }
 
 .nav ul {
     list-style: none;
@@ -63,7 +63,7 @@ body {
 .nav a:hover { opacity: 0.6; }
 .menu-toggle { display: none; font-size: 26px; cursor: pointer; }
 
-/* ================= BANNER & SEÇÕES (ESPAÇAMENTO REDUZIDO) ================= */
+/* ================= BANNER & SEÇÕES ================= */
 .banner { margin-top: 85px; }
 .banner img { width: 100%; display: block; }
 
@@ -77,7 +77,14 @@ body {
 }
 
 .bg-light { background: rgba(247, 247, 247, 0.92); }
-.section h2 { text-align: center; margin-bottom: 25px; font-weight: 600; }
+
+.section h2 { 
+    text-align: center; 
+    margin-bottom: 25px; 
+    font-weight: 700;    /* Ajustado conforme exemplo */
+    color: #a68210;     /* ALTERADO: Dourado escuro */
+    font-size: 32px;
+}
 
 #empresa p {
     max-width: 750px;
@@ -100,14 +107,15 @@ body {
     text-align: center;
     transition: 0.3s;
     text-decoration: none;
-    color: #000;
+    color: #444;
     border-radius: 6px;
 }
 
 .card img { width: 70px; margin-bottom: 15px; }
+.card h3 { color: #111; }
 .card:hover { transform: translateY(-6px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
 
-/* ================= DETALHAMENTO (PROXIMIDADE AUMENTADA) ================= */
+/* ================= DETALHAMENTO (ZIG-ZAG) ================= */
 .segmento-detalhe { border-top: 1px solid #eee; }
 
 .detalhe-box {
@@ -116,7 +124,6 @@ body {
     gap: 25px; 
 }
 
-/* 🔥 INVERSÃO NO DESKTOP */
 @media (min-width: 769px) {
     .detalhe-box.reverse {
         flex-direction: row-reverse;
@@ -131,7 +138,13 @@ body {
     border-radius: 6px;
 }
 
-.detalhe-box h3 { margin-bottom: 8px; }
+.detalhe-box h3 { 
+    margin-bottom: 8px; 
+    color: #a68210; /* ALTERADO: Dourado escuro */
+    font-weight: 700; 
+    font-size: 28px;
+}
+
 .detalhe-box p { max-width: 700px; }
 
 /* ================= COMPONENTES EXTRAS ================= */
@@ -153,16 +166,16 @@ body {
     transition: 0.3s;
 }
 
-/* ================= FOOTER (ATUALIZADO) ================= */
+/* ================= FOOTER ================= */
 .footer {
     padding: 60px 0;
-    background: #000000; /* Fundo Preto */
-    color: #ffffff;      /* Texto Branco */
+    background: #000000;
+    color: #ffffff;
     border-top: 1px solid #333;
 }
 
 .footer img {
-    height: 60px;        /* Escudo Reduzido */
+    height: 60px;
     margin-bottom: 20px;
 }
 
@@ -174,11 +187,6 @@ body {
     text-align: left;
 }
 
-.footer-col {
-    flex: 1;
-    min-width: 220px;
-}
-
 .footer-col h4 {
     margin-bottom: 20px;
     font-weight: 600;
@@ -188,30 +196,12 @@ body {
     letter-spacing: 1px;
 }
 
-.footer-col p {
-    font-size: 14px;
-    color: #ccc;
-    margin-bottom: 10px;
-}
+.footer-col p { font-size: 14px; color: #ccc; margin-bottom: 10px; }
+.footer-social { display: flex; gap: 20px; font-size: 22px; margin-top: 15px; }
+.footer-social i { cursor: pointer; transition: 0.3s; color: #ffffff; }
+.footer-social i:hover { color: #25D366; }
 
-.footer-social {
-    display: flex;
-    gap: 20px;
-    font-size: 22px;
-    margin-top: 15px;
-}
-
-.footer-social i {
-    cursor: pointer;
-    transition: 0.3s;
-    color: #ffffff;
-}
-
-.footer-social i:hover {
-    color: #25D366; /* Cor de destaque ao passar o mouse */
-}
-
-/* ================= RESPONSIVO (MOBILE) ================= */
+/* ================= RESPONSIVO ================= */
 @media (max-width: 768px) {
     .nav ul {
         display: none;
@@ -223,33 +213,15 @@ body {
         padding: 20px;
         border: 1px solid #eee;
     }
-
     .nav ul.active { display: flex; }
     .menu-toggle { display: block; }
-
-    .detalhe-box, 
-    .detalhe-box.reverse {
+    .detalhe-box, .detalhe-box.reverse {
         flex-direction: column !important;
         text-align: center;
         gap: 15px;
     }
-
-    .detalhe-box img {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .footer-container { 
-        text-align: center; 
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .footer-col { 
-        text-align: center; 
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
+    .detalhe-box img { max-width: 100%; margin: 0 auto; }
+    .footer-container { text-align: center; flex-direction: column; align-items: center; }
+    .footer-col { text-align: center; }
+    .footer-social { justify-content: center; }
 }
