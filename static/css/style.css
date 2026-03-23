@@ -68,12 +68,12 @@ body {
 .banner img { width: 100%; display: block; }
 
 .section {
-    padding: 40px 0; /* Reduzido de 90px para 40px */
+    padding: 40px 0; 
     transition: all 0.8s ease;
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(2px);
     border-radius: 8px;
-    margin-bottom: 15px; /* Reduzido de 30px para 15px */
+    margin-bottom: 15px;
 }
 
 .bg-light { background: rgba(247, 247, 247, 0.92); }
@@ -113,7 +113,7 @@ body {
 .detalhe-box {
     display: flex;
     align-items: center;
-    gap: 25px; /* Reduzido de 40px para 25px para aproximar imagem e texto */
+    gap: 25px; 
 }
 
 /* 🔥 INVERSÃO NO DESKTOP */
@@ -125,7 +125,7 @@ body {
 
 .detalhe-box img {
     width: 100%;
-    max-width: 500px; /* Reduzido levemente para ajuste fino */
+    max-width: 500px; 
     height: auto;
     object-fit: cover;
     border-radius: 6px;
@@ -153,12 +153,17 @@ body {
     transition: 0.3s;
 }
 
-/* ================= FOOTER ================= */
+/* ================= FOOTER (ATUALIZADO) ================= */
 .footer {
-    text-align: center;
-    padding: 40px 0;
-    background: rgba(255, 255, 255, 0.92);
-    border-top: 1px solid #eee;
+    padding: 60px 0;
+    background: #000000; /* Fundo Preto */
+    color: #ffffff;      /* Texto Branco */
+    border-top: 1px solid #333;
+}
+
+.footer img {
+    height: 60px;        /* Escudo Reduzido */
+    margin-bottom: 20px;
 }
 
 .footer-container {
@@ -166,11 +171,45 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
-    margin-top: 30px;
+    text-align: left;
 }
 
-.footer-col { flex: 1; min-width: 220px; text-align: left; }
-.footer-social { display: flex; gap: 15px; font-size: 26px; margin-top: 10px; }
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.footer-social i {
+    cursor: pointer;
+    transition: 0.3s;
+    color: #ffffff;
+}
+
+.footer-social i:hover {
+    color: #25D366; /* Cor de destaque ao passar o mouse */
+}
 
 /* ================= RESPONSIVO (MOBILE) ================= */
 @media (max-width: 768px) {
@@ -200,6 +239,17 @@ body {
         margin: 0 auto;
     }
 
-    .footer-container { text-align: center; }
-    .footer-col { text-align: center; }
+    .footer-container { 
+        text-align: center; 
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-col { 
+        text-align: center; 
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
 }
