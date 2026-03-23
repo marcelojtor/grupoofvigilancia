@@ -13,6 +13,14 @@ color:#111;
 line-height:1.6;
 }
 
+/* ================= BACKGROUND GLOBAL (NOVO) ================= */
+
+body{
+background-image: url('../hub_de_imagens_2/background.png');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
 
 /* ================= CONTAINER ================= */
 
@@ -29,8 +37,13 @@ margin:auto;
 position:fixed;
 width:100%;
 top:0;
-background:#fff;
-border-bottom:1px solid #eee;
+
+/* 🔥 EFEITO TRANSLÚCIDO PROFISSIONAL */
+background: rgba(255,255,255,0.75);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+
+border-bottom:1px solid rgba(255,255,255,0.3);
 z-index:1000;
 }
 
@@ -100,10 +113,16 @@ display:block;
 .section{
 padding:90px 0;
 transition:all 0.8s ease;
+
+/* 🔥 EFEITO “CARD SOBRE BACKGROUND” */
+background: rgba(255,255,255,0.92);
+backdrop-filter: blur(2px);
+border-radius:8px;
+margin-bottom:30px;
 }
 
 .bg-light{
-background:#f7f7f7;
+background: rgba(247,247,247,0.92);
 }
 
 .section h2{
@@ -223,7 +242,8 @@ text-align:center;
 
 padding:60px 0;
 
-background:#fff;
+/* 🔥 FOOTER SOBRE BACKGROUND */
+background: rgba(255,255,255,0.92);
 
 border-top:1px solid #eee;
 
